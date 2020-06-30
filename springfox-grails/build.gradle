@@ -18,6 +18,7 @@ buildscript {
     maven {
       url "https://plugins.gradle.org/m2/"
     }
+    maven { url "https://repo.grails.org/grails/core" }
     jcenter()
     mavenCentral()
   }
@@ -49,17 +50,15 @@ dependencies {
     testCompile "org.spockframework:spock-spring:${spock}"
     testCompile "org.spockframework:spock-core:${spock}"
     testCompile "org.codehaus.groovy:groovy-all:${groovy}"
-    testCompile "org.grails:grails-plugin-testing:${grails}"
     testCompile "org.grails:grails-plugin-rest:${grails}"
 
-    provided "io.swagger:swagger-annotations:${swagger2Core}"
+    provided "io.swagger.core.v3:swagger-annotations:${swagger2Core}"
     provided "org.springframework:spring-core:$spring"
     provided "org.springframework:spring-web:$spring"
     provided "org.springframework:spring-webmvc:$spring"
     provided "org.springframework:spring-context:$spring"
     provided "org.springframework.boot:spring-boot-autoconfigure:$springBoot"
     provided "org.grails:grails-core:$grails"
-    provided "org.grails:grails-web-url-mappings:$grails"
     provided "org.grails:grails-web-url-mappings:$grails"
     provided "javax.servlet:javax.servlet-api:$servlet"
 
